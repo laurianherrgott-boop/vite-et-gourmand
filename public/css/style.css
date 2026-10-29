@@ -30,6 +30,10 @@ header a {
   margin-left: 24px;
 }
 
+header > a {
+  margin-left: 0;
+}
+
 header a:hover {
   color: var(--bordeaux);
   text-decoration: underline;
@@ -40,6 +44,8 @@ h1 {
   color: var(--bordeaux);
   padding: 0 80px;
 }
+
+/* Page d'accueil : texte de présentation et bouton */
 .intro {
   padding: 0 80px;
   max-width: 800px;
@@ -66,18 +72,7 @@ h1 {
   color: var(--texte);
 }
 
-/* Pied de page bordeaux */
-footer {
-  background-color: var(--bordeaux);
-  color: white;
-  padding: 24px 80px;
-  margin-top: auto;
-}
-
-footer a {
-  color: white;
-  margin-right: 24px;
-}
+/* Page Menus : cartes des formules */
 .menus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -111,6 +106,69 @@ footer a {
   color: var(--texte);
 }
 
+/* Page Contact : formulaire */
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0 80px 48px;
+}
+
+.formulaire label {
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.formulaire input,
+.formulaire textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  outline: 2px solid var(--dore);
+  border-color: var(--dore);
+}
+
+.formulaire .bouton {
+  margin-top: 24px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Pages légales : mentions légales et CGV */
+.legal {
+  padding: 0 80px 48px;
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.legal h2 {
+  color: var(--bordeaux);
+  margin-top: 32px;
+  font-size: 1.2rem;
+}
+
+/* Pied de page bordeaux */
+footer {
+  background-color: var(--bordeaux);
+  color: white;
+  padding: 24px 80px;
+  margin-top: auto;
+}
+
+footer a {
+  color: white;
+  margin-right: 24px;
+}
+
 /* Sur mobile (écran de moins de 768 px) */
 @media (max-width: 768px) {
   header {
@@ -119,7 +177,7 @@ footer a {
     padding: 16px 20px;
   }
 
-  h1, footer, .intro, .menus {
+  h1, footer, .intro, .menus, .formulaire, .legal {
     padding-left: 20px;
     padding-right: 20px;
   }
